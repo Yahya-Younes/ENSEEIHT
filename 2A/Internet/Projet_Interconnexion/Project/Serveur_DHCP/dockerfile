@@ -1,0 +1,20 @@
+FROM debian
+RUN apt-get update
+RUN apt-get -y install iptables apt-utils iproute2 net-tools systemd telnet nano iputils-ping tcpdump inetutils-traceroute curl isc-dhcp-server
+
+RUN apt-get update && apt-get install -y isc-dhcp-client
+RUN apt-get update && apt-get install -y dhcpcd5
+RUN apt-get update && apt-get install -y isc-dhcp-server
+
+RUN apt-get -f install
+COPY start.sh /start.sh
+COPY  ./dhcp/dhcpd.conf /etc/dhcp
+#COPY ./isc-dhcp-server /etc/default/isc-dhcp-server
+#COPY BOX.sh /home/
+#RUN touch var/lib/dhcp/dhcpd.conf
+#RUN ["chmod", "+x", "/home/start.sh"]
+#Start the dhcp service#'
+#RUN ["chmod", "+x", "/start.sh"]
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

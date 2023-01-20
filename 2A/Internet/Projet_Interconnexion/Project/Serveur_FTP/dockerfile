@@ -1,0 +1,18 @@
+FROM kathara/quagga
+
+# Installer bind9 et quagga
+RUN apt-get update && apt-get -y install proftpd
+RUN apt-get update
+RUN apt-get -y install iptables apt-utils iproute2 net-tools systemd telnet nano iputils-ping tcpdump inetutils-traceroute curl
+RUN apt-get -f install
+
+RUN apt-get install -y iproute2
+RUN apt install net-tools
+
+
+RUN service proftpd start
+COPY Serveur_FTP.sh  /home/Serveur_FTP.sh
+
+RUN ["chmod", "+x", "/home/Serveur_FTP.sh"]
+
+ENTRYPOINT /home/Serveur_FTP.sh ; /bin/bash
