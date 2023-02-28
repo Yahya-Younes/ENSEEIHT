@@ -1,1 +1,0 @@
-A = [x_donnees_bruitees;ones(size(x_donnees_bruitees))]
