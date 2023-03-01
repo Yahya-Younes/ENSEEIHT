@@ -1,0 +1,48 @@
+import 'PetriNet.ecore'
+
+package PetriNet
+
+context PetriNet
+-- un PetriNet doit avoir un nom valide et nonvide.
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+context Place
+-- : une Place doit etre composé d’au moins un caractère 
+-- et doit etre composé de lettres, chiffres ou soulignés. un chiffre ne peut pas etre en premiere position.
+inv validPlaceName('Invalid Place name: ' + self.name):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]+')
+
+-- deux Places ne peuvent pas avoir le même nom.
+inv uniqPlaceNames : self.PetriNet.petrinetelement
+	->select(pe | pe.oclIsKindOf(Place))
+	->collect(pe | pe.oclAsType(Place))
+	->forAll(place | self=place or self.name <> place.name)
+	
+-- un token ne peut pas avoir une valeur négative.
+inv PositiveTokenNumber : self.nbJeton >= 0
+
+context Transition
+-- une Transition doit etre composé d’au moins un caractère 
+-- et doit etre composé de lettres, chiffres ou soulignés. un chiffre ne peut pas etre en premiere position.
+inv validTransitionName('Invalid Place name: ' + self.name):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]+')
+
+-- deux Transitions ne peuvent pas avoir le même nom.
+inv uniqTransitionNames : self.PetriNet.petrinetelement
+	->select(pe | pe.oclIsKindOf(Transition))
+	->collect(pe | pe.oclAsType(Transition))
+	->forAll(transition | self=transition or self.name <> transition.name)
+
+context Arc
+-- un Arc ne peut pas être reflexive.
+inv NonReflexiveArc : self.predecessor <> self.successor
+
+-- un Arc ne peut pas avoir le même type de Shape (Place ou Transition) comme predecesseur ou successeur.
+inv NotSameShapeType : (self.predecessor.oclIsKindOf(Place) and self.successor.oclIsKindOf(Transition) or (self.predecessor.oclIsKindOf(Transition) and self.successor.oclIsKindOf(Place)))
+
+-- le cout d'un arc est au moins égale à 1
+inv CostSuperieurThanOne : self.poids >= 1
+
+
+endpackage

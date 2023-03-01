@@ -1,0 +1,13 @@
+op finished = p_conceptionfinished/\p_redactionDocfinished/\p_programmationfinished/\p_testfinished;
+op running = p_conceptionrunning/\p_redactionDocrunning/\p_programmationrunning/\p_testrunning;
+op started = p_conceptionstarted/\p_redactionDocstarted/\p_programmationstarted/\p_teststarted;
+op ready = p_conceptionready/\p_redactionDocready/\p_programmationready/\p_testready;
+
+[] (finished => dead);
+[] <> dead;
+[] (dead => finished);
+- <> finished;
+[] (finished => - <> ready /\ - <> running /\  started);
+[] (running => ready /\ - <> finished /\ started);
+[] (- <> started => - <> ready /\ - <> running /\ - <> finished);
+[] (dead => finished);
