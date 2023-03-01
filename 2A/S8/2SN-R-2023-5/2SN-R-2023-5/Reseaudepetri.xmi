@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petrinet:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="PetriNet1" name="Petri">
+  <petrinetelement xsi:type="petrinet:Place" name="Conception_ready" nbJeton="1"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="Conception_start"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Conception_running"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Conception_started"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="Conception_finish"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Conception_finished"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.0" successor="//@petrinetelement.1" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.1" successor="//@petrinetelement.3" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.1" successor="//@petrinetelement.2" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.3" successor="//@petrinetelement.4" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.4" successor="//@petrinetelement.5" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Developpement_ready" nbJeton="1"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="Developpement_start"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Developpement_running"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Developpement_started"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="Developpement_finish"/>
+  <petrinetelement xsi:type="petrinet:Place" name="Developpement_finished"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.11" successor="//@petrinetelement.12" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.12" successor="//@petrinetelement.14" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.12" successor="//@petrinetelement.13" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.14" successor="//@petrinetelement.15" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.15" successor="//@petrinetelement.16" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionDoc_ready" nbJeton="1"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="RedactionDoc_start"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionDoc_running"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionDoc_started"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="RedactionDoc_finish"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionDoc_finished"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.22" successor="//@petrinetelement.23" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.23" successor="//@petrinetelement.25" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.23" successor="//@petrinetelement.24" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.25" successor="//@petrinetelement.26" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.26" successor="//@petrinetelement.27" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionTests_ready" nbJeton="1"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="RedactionTests_start"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionTests_running"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionTests_started"/>
+  <petrinetelement xsi:type="petrinet:Transition" name="RedactionTests_finish"/>
+  <petrinetelement xsi:type="petrinet:Place" name="RedactionTests_finished"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.33" successor="//@petrinetelement.34" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.34" successor="//@petrinetelement.36" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.34" successor="//@petrinetelement.35" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.36" successor="//@petrinetelement.37" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.37" successor="//@petrinetelement.38" poids="1"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.3" successor="//@petrinetelement.34" poids="1" linkType="read"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.5" successor="//@petrinetelement.12" poids="1" linkType="read"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.16" successor="//@petrinetelement.37" poids="1" linkType="read"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.5" successor="//@petrinetelement.26" poids="1" linkType="read"/>
+  <petrinetelement xsi:type="petrinet:Arc" predecessor="//@petrinetelement.3" successor="//@petrinetelement.23" poids="1" linkType="read"/>
+</petrinet:PetriNet>

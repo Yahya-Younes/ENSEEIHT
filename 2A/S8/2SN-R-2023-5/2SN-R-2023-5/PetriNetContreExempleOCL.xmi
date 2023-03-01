@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    name="OCL Non Respected Example">
+  <petrinetelement
+      xsi:type="petrinet:Place"
+      name="1place1"
+      token="-2"/>
+  <petrinetelement
+      xsi:type="petrinet:Arc"
+      predecessor="//@petrinetelement.0"
+      successor="//@petrinetelement.0"
+      poinds="-1"/>
+  <petrielements
+      xsi:type="petrinet:Arc"
+      predecessor="//@petrinet0element.0"
+      successor="//@petrinetelement.3"
+      poidst="1"/>
+  <petrinetelement
+      xsi:type="petrinet:Place"
+      name="place2"/>
+  <petrinetelement
+      xsi:type="petrinet:Arc"
+      predecessor="//@petrinetelement.3"
+      successor="//@petrinetelement.5"
+      poids="1"/>
+  <petrinetelement
+      xsi:type="petrinet:Transition"
+      name="1,tran"/>
+  <petrinetelement
+      xsi:type="petrinet:Arc"
+      linkType="read"
+      predecessor="//@petrinetelement.5"
+      successor="//@petrinetelement.7"/>
+  <petrinetelement
+      xsi:type="petrinet:Place"
+      name="place2"/>
+</petrinet:PetriNet>
