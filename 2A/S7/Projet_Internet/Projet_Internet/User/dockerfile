@@ -1,0 +1,11 @@
+FROM debian
+RUN apt-get update
+RUN apt-get -y install iptables apt-utils iproute2 net-tools systemd telnet nano iputils-ping tcpdump inetutils-traceroute curl
+RUN apt-get -f install
+RUN apt-get -y install wget
+RUN apt-get -y install ftp
+#RUN apt install dnsutils
+#RUN apt-get install -y --force-yes wireguard
+ENTRYPOINT  /bin/bash
+####################
+#ENTRYPOINT ["tail", "-f", "/dev/null"] 
