@@ -1,0 +1,7 @@
+FROM debian
+RUN apt-get update && apt-get install -y openvpn
+COPY server.conf /etc/openvpn/
+RUN apt-get install -y --force-yes wireguard
+
+EXPOSE 1194/udp
+CMD ["openvpn", "--config", "/etc/openvpn/server.conf"]

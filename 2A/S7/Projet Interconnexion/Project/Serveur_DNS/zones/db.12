@@ -1,0 +1,12 @@
+$TTL    604800
+@       IN      SOA     dns.groupe3.com. root.groupe3.com. (
+                       20041122         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@         IN      NS      dns.
+3    	  IN      PTR     dns.groupe3.com.
+5         IN      PTR     www.groupe3.com.
+6         IN      PTR     ftp.groupe3.com.

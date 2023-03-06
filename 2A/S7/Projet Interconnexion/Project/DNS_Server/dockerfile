@@ -1,0 +1,10 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y bind9
+
+COPY named.conf /etc/bind/
+COPY ./zones/db.groupe3.com /etc/bind/
+
+EXPOSE 53/udp
+
+CMD ["/usr/sbin/named", "-f"]
