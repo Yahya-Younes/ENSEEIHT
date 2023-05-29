@@ -1,0 +1,33 @@
+UsagerClient                UsagerServer
+
+upload <<< download  
+
+UsagerClient lance le download de [1,2,3,....] fragments de meme doc à partir de 
+
+                                                plusieurs UsagerServer possédant une copie du doc chacun
+
+
+
+Avec Sockets de java : DEUX progs executes 1 - UsagerClient download de plsrs UsagerServer
+                                           2 - UsagerServer(i) upload un fragment demandé du doc 
+
+final static String hosts[] = {"host1", "host2","host3"}; @ serveurs
+final static int ports[] = {8081,8082,8083};
+
+final static int nb = 3;
+static String document[] = new String[nb];
+
+UsagerServeur(indice, port)
+
+
+ON GERE UN SEUL DOC QUI EST DE TYPE TABLEAU DE STRING 
+
+Fragement = String du tableau(document)
+
+DOCUMENT = [String1, String2, String3]
+
+UsagerServeur1 , UsagerServeur2, USagerServeur3
+
+UsagerCLient envoie num k à USagerSeveur(i)
+
+UsagerServeur(i) envoie String_k à UsagerClient
