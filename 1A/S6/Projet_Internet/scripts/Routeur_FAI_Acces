@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Set up eth0 interface
+ip link set dev eth0 up
+ip addr add 11.0.0.35/27 dev eth0
+
+#Set up eth2 interface
+ip link set dev eth1 up
+ip addr add 11.0.0.129/25 dev eth1
+
+
+#Static routing
+#Activate the forwarding
+echo 1 >/proc/sys/net/ipv4/ip_forward
+
+#Dynamic rooting
+service quagga start
+
+
+

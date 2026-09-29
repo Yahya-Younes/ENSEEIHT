@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Set address on eth0
+ip link set dev eth0 up
+ip addr add 11.0.0.65/26 dev eth0
+
+
+#Add default route via sevices router
+ip route add default via 11.0.0.67
+
+#Configure the DNS server
+service bind9 start
+
