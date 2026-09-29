@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Set up eth0 interface of client
-ip link set dev eth0 up 
-# Activate DHCP on the client
-dhclient eth0

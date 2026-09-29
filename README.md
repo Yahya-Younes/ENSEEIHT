@@ -61,12 +61,14 @@ The larger projects have their own `README.md` (linked below) describing their g
 
 ### 3rd year – MSc Satellite Communications
 
+Labs are kept as `.zip` archives – see [`3A_MSc_SATCOM/README.md`](3A_MSc_SATCOM/README.md) for what each contains.
+
 | Course | Content | Language / tools |
 |---|---|---|
-| [Digital_Receivers_DPLL](3A_MSc_SATCOM/Digital_Receivers_DPLL) | Carrier-phase recovery with digital PLLs (QPSK / 8-PSK, DD & NDA detectors, S-curves, jitter) | MATLAB |
-| [Modern_Channel_Coding](3A_MSc_SATCOM/Modern_Channel_Coding) | Repetition, parity-check, LDPC and turbo codes | MATLAB |
-| [TP_6TiSCH](3A_MSc_SATCOM/TP_6TiSCH) | 6TiSCH / IEEE 802.15.4e network simulation (latency, join time, lifetime) | 6TiSCH simulator |
-| [TP_Swarm_Simulator](3A_MSc_SATCOM/TP_Swarm_Simulator) | Nano-satellite swarm simulation | Python, Jupyter |
+| [Digital_Receivers_DPLL.zip](3A_MSc_SATCOM/Digital_Receivers_DPLL.zip) | Carrier-phase recovery with digital PLLs (QPSK / 8-PSK, DD & NDA detectors, S-curves, jitter) | MATLAB |
+| [Modern_Channel_Coding.zip](3A_MSc_SATCOM/Modern_Channel_Coding.zip) | Repetition, parity-check, LDPC and turbo codes | MATLAB |
+| [TP_6tisch.zip](3A_MSc_SATCOM/TP_6tisch.zip) | 6TiSCH / IEEE 802.15.4e network simulation (latency, join time, lifetime) | 6TiSCH simulator |
+| [TP_Swarm_Simulator.zip](3A_MSc_SATCOM/TP_Swarm_Simulator.zip) | Nano-satellite swarm simulation | Python, Jupyter |
 | [Down_Converter](3A_MSc_SATCOM/Down_Converter) | RF down-converter design | Word |
 | [Spacecraft_Sizing](3A_MSc_SATCOM/Spacecraft_Sizing) | Spacecraft sizing report | PDF |
 | [SHS_Project](3A_MSc_SATCOM/SHS_Project) | Fire-prediction software & services (business project) | PDF, PowerPoint |
@@ -83,4 +85,5 @@ The larger projects have their own `README.md` (linked below) describing their g
 ## Conventions
 
 - Folder names are ASCII with `_` instead of spaces or accents, so paths work in any shell.
-- Compiled binaries, caches and IDE files are ignored (see `.gitignore`).
+- Nothing was deleted during the reorganisation: files were only moved/renamed, and archives
+  (`.zip`, `.tar`, `.tgz`) are kept as uploaded.
