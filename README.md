@@ -1,4 +1,26 @@
-# ENSEEIHT – Coursework
+# ENSEEIHT – Engineering Coursework
+
+> Labs, projects and reports from my Computer Science & Telecommunications engineering degree
+> at ENSEEIHT (Toulouse INP), followed by an MSc in Satellite Communications.
+
+<p>
+  <img src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white" alt="MATLAB">
+  <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
+</p>
+
+### Highlights
+
+- **Network interconnection** – a full company + ISP + home network emulated with Docker: routing, NAT/firewall, DHCP, DNS, web, FTP, VoIP and a WireGuard VPN ([details](2A/S7/Projet_Interconnexion)).
+- **Satellite-swarm network science** – clustering (K-means, DBSCAN, Girvan–Newman) and graph analysis of a 100-satellite swarm ([details](2A/S8/Projet_Ingenierie_Reseaux)).
+- **Model-driven engineering** – SimplePDL → Petri-net transformation with Ecore, OCL, Xtext, Acceleo and LTL model-checking ([details](2A/S8/IDM)).
+- **Distributed shared objects** – Java RMI implementation of a readers/writer consistency protocol ([details](2A/S7/Projet_Donnees_Reparties)).
+- **Digital communications** – OFDM, channel equalisation, satellite link design, digital PLLs and channel coding (MATLAB).
+
+## About
 
 Labs (TP), tutorials (TD), projects and reports from my engineering studies at
 [ENSEEIHT](https://www.enseeiht.fr/) (Toulouse INP, *Sciences du Numérique* department,
@@ -87,3 +109,10 @@ Labs are kept as `.zip` archives – see [`3A_MSc_SATCOM/README.md`](3A_MSc_SATC
 - Folder names are ASCII with `_` instead of spaces or accents, so paths work in any shell.
 - Nothing was deleted during the reorganisation: files were only moved/renamed, and archives
   (`.zip`, `.tar`, `.tgz`) are kept as uploaded.
+
+---
+
+## Author
+
+**Yahya Younes** – AI & GenAI Engineer (LLM, RAG, model compression), Toulouse, France
+[Portfolio](https://yahyayounes.com) · [LinkedIn](https://www.linkedin.com/in/yahyayounes/) · [GitHub](https://github.com/Yahya-Younes)
